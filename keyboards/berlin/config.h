@@ -24,3 +24,7 @@
 #define SLIDER_PIN_A A2
 #define SLIDER_PIN_B A1
 #define SLIDER_PIN_C A0
+
+#define LED_NUM_LOCK_PIN D0
+#define LED_CAPS_LOCK_PIN D1
+#define LED_SCROLL_LOCK_PIN D2
