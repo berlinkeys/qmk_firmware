@@ -28,3 +28,8 @@
 #define LED_NUM_LOCK_PIN D0
 #define LED_CAPS_LOCK_PIN D1
 #define LED_SCROLL_LOCK_PIN D2
+
+#define WS2812_TRST_US 280
+#define WS2812_T1L 300
+#define WS2812_DI_PIN D8
+#define RGBLED_NUM 32

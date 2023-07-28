@@ -18,7 +18,7 @@
         "vid": "0xBEEF"
     },
     "rgb-lighting": {
-        "led_count": "10",
+        "led_count": "32",
         "pin": "D8",
         "animations": {
             "rainbow_swirl": true
