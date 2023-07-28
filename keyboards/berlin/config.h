@@ -29,7 +29,12 @@
 #define LED_CAPS_LOCK_PIN D1
 #define LED_SCROLL_LOCK_PIN D2
 
-#define WS2812_TRST_US 280
-#define WS2812_T1L 300
 #define WS2812_DI_PIN D8
 #define RGBLED_NUM 32
+
+//LED Driver Timings, aka black magic
+#define WS2812_TRST_US 500
+#define WS2812_T0L 420
+#define WS2812_T0H 1600
+#define WS2812_T1L 420
+#define WS2812_T1H 1600
