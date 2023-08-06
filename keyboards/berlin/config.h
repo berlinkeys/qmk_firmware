@@ -30,7 +30,7 @@
 #define LED_SCROLL_LOCK_PIN D2
 
 #define WS2812_DI_PIN D8
-#define RGBLED_NUM 32
+#define RGBLED_NUM 127
 
 //LED Driver Timings, aka black magic
 #define WS2812_TRST_US 500

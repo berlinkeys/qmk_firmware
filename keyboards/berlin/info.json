@@ -17,13 +17,6 @@
         "pid": "0xBE00",
         "vid": "0xBEEF"
     },
-    "rgb-lighting": {
-        "led_count": "32",
-        "pin": "D8",
-        "animations": {
-            "rainbow_swirl": true
-        }
-    },
     "encoder": {
         "rotary": [
             { "pin_a": "D15", "pin_b": "D14", "resolution": 4},
