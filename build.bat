@@ -1,0 +1,2 @@
+C:\QMK_MSYS\conemu\ConEmu64.exe -NoSingle -NoUpdate -icon "C:\QMK_MSYS\icon.ico" -title "QMK MSYS" -runlist "C:\QMK_MSYS\usr\bin\bash.exe -lic 'qmk compile -j 0 -kb berlin -km default'" -l -i -cur_console:m:""
+exit

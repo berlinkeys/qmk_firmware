@@ -14,10 +14,14 @@ bool encoder_update_kb(uint8_t index, bool clockwise) {
         }
     } else if (index == 1) { /* Top Right Display Encoder, not yet implemented */
         if (clockwise) {
-            tap_code(KC_MNXT);
+            rgblight_decrease_val();
+            if(rgblight_get_val() <= 1) {
+                rgblight_sethsv(rgblight_get_hue(), rgblight_get_sat(), 255);
+            }
         } else {
-            tap_code(KC_MPRV);
+            rgblight_increase_hue();
         }
+        rgblight_set();
     }
     return true;
 }
@@ -33,7 +37,8 @@ bool dip_switch_update_kb(uint8_t index, bool active) {
         }
     } else if (index == 1) {
         if(active) {
-            tap_code(KC_MPLY);
+            rgblight_setrgb(RGB_TURQUOISE);
+            rgblight_set();
         }
     }
     return true;
