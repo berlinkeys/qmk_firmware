@@ -14,7 +14,7 @@
  *  along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-#include "spi_master.h"
+#include "spi.h"
 
 #include "timer.h"
 
@@ -42,7 +42,7 @@
 #    define SPI_TIMEOUT 100
 #endif
 
-static pin_t   currentSlavePin    = NO_PIN;
+static pin_t   currentSlavePin    = PF2;
 static uint8_t currentSlaveConfig = 0;
 static bool    currentSlave2X     = false;
 
