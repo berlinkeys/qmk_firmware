@@ -24,25 +24,11 @@
 #   define SPI_MISO_PIN PA7
 #endif
 
-#if defined(__AVR_AT90USB162__) || defined(__AVR_ATmega16U2__) || defined(__AVR_ATmega32U2__) || defined(__AVR_ATmega16U4__) || defined(__AVR_ATmega32U4__) || defined(__AVR_AT90USB646__) || defined(__AVR_AT90USB647__) || defined(__AVR_AT90USB1286__) || defined(__AVR_AT90USB1287__)
-#    define SPI_SCK_PIN B1
-#    define SPI_MOSI_PIN B2
-#    define SPI_MISO_PIN B3
-#elif defined(__AVR_ATmega32A__)
-#    define SPI_SCK_PIN B7
-#    define SPI_MOSI_PIN B5
-#    define SPI_MISO_PIN B6
-#elif defined(__AVR_ATmega328P__) || defined(__AVR_ATmega328__)
-#    define SPI_SCK_PIN B5
-#    define SPI_MOSI_PIN B3
-#    define SPI_MISO_PIN B4
-#endif
-
 #ifndef SPI_TIMEOUT
 #    define SPI_TIMEOUT 100
 #endif
 
-static pin_t   currentSlavePin    = PF2;
+static pin_t   currentSlavePin    = NO_PIN;
 static uint8_t currentSlaveConfig = 0;
 static bool    currentSlave2X     = false;
 

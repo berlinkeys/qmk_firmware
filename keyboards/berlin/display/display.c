@@ -28,7 +28,7 @@ IO3 15  PC0
 
 spi_status_t initialize_display() {
 
-    SPDR = 0x00;
+    data = 0x00;
     spi_init();
 
     static pin_t slavePin = PC2;
@@ -36,16 +36,19 @@ spi_status_t initialize_display() {
     static int8_t mode = 2;
     static int16_t divisor = 128;
 
-    spi_start(slavePin, lsbFirst, mode, divisor);
+    out = spi_start(slavePin, lsbFirst, mode, divisor);
 
-    SPDR = SPDR | spi_write(0x00);
-    SPDR = SPDR | spi_write(0x00);
-    SPDR = SPDR | spi_write(0x00);
+    data = data | spi_write(0x00);
+    data = data | spi_write(0x00);
+    data = data | spi_write(0x00);
 
-    return SPDR;
+    return out;
 }
 
 
 //read disp id
-initialize_display();
+
+if (initialize_display()) {
+     writePinHigh(LED_SCROLL_LOCK_PIN);
+}
 spi_read(*0xC0000);

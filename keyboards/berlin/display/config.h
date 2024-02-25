@@ -1,0 +1,3 @@
+/*
+This file contains config options specific to the display.
+*/
